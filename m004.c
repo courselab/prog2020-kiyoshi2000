@@ -29,8 +29,17 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+  int valor;
+  valor= 0;
+  int n;
+  int i; 
+
+
+  n =strlen (b);  //tamanho de b
+  for (i=n-1; i>=0; i--)
+    valor = valor + (b[i]-48);
+
+  return valor;
 }
 
 #define USAGE "m004 <string>\n"
