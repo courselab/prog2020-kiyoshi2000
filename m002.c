@@ -26,48 +26,75 @@
 /* Sort three integers x, y, z in ascending order.*/
     
 void sort (int *a, int *b, int *c)
+{
 
 int x;
+int y;
+int z;
 
   if ((*a<*b) && (*a<*c))   
  { 
+     *a = *a;
+
      if (*b>*c) // (a,c,b)
      {
-       
+      x = *b;
+      y = *c;
+
+      *c = x;  // trocando  c por b
+      *b = y; // trocando  b por c  
      }
 
      if (*b<*c) // (a,b,c)
     { 
-       //Condicoes//
+        *b = *b;
+        *c = *c;
       }
  }
 
-  if ((*a<*c) && (*a>*b))    // (b,a,c) 
+ if ((*a<*c) && (*a>*b))    // (b,a,c) 
   {
-     //Condicoes
+     x = *b;
+     y = *a;
+
+     *b = y; // trocando b por a
+     *a = x; // trocando a por b
   } 
 
-  if ((*a<b) && (*a>*c))     // (c,a,b)
+  if ((*a<*b) && (*a>*c))     // (c,a,b)
   {
-    //Condicoes
+    x = *a; 
+    y = *b;
+    z = *c;
+
+    *a = z; 
+    *b = x;
+    *c = y;
   }
 
   if ((*a>*b) && (*a>*c)) 
   {
     if (*c>*b)      // (b,c,a)
     {
-     //Condicoes//
+      x = *a; 
+      y = *b;
+      z = *c;
+
+      *a = y;
+      *b = z;
+      *c = x;
     }
     if  (*c<*b)   // (c,b,a)
+      *b = *b;
     {
-      //Condicoes//
+       x = *a; 
+       z = *c;
+
+       *a = z;
+       *c = x;
     }
   } 
-
-    
-
-
-
+ }
 /* Do not edit this function. */
 
 int main (int argc, char **argv)
