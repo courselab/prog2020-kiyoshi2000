@@ -42,6 +42,8 @@ int decimal (char *b)
   return valor;
 }
 
+
+
 #define USAGE "m004 <string>\n"
 
 /* Do not edit this function. */

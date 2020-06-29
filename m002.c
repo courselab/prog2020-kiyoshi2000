@@ -42,23 +42,23 @@ int x;
       }
  }
 
-  if ((*a<*c) && (*a>*b)) // (b,a,c) 
+  if ((*a<*c) && (*a>*b))    // (b,a,c) 
   {
      //Condicoes
   } 
 
-  if ((*a<b) && (*a>*c)) // (c,a,b)
+  if ((*a<b) && (*a>*c))     // (c,a,b)
   {
     //Condicoes
   }
 
   if ((*a>*b) && (*a>*c)) 
   {
-    if (*c>*b) // (b,c,a)
+    if (*c>*b)      // (b,c,a)
     {
      //Condicoes//
     }
-    if  (*c<*b) // (c,b,a)
+    if  (*c<*b)   // (c,b,a)
     {
       //Condicoes//
     }
