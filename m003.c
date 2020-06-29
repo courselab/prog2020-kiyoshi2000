@@ -22,8 +22,23 @@
 /* Verify if the positive integer 'a' is prime. */
 
 int is_prime (int a)
+
 {
-  return 0;
+  int resto;
+  int qtdresto;
+  int i;
+
+ for (i=1; i<(a+1); i++)
+  {
+   resto =a%i;
+   
+   if (resto == 0)
+     qtdresto= (qtdresto +1);
+  }
+   if (qtdresto ==2)
+    return 1;
+  else 
+    return 0;
 }
 
 #define USAGE "m003 <num>\n"
