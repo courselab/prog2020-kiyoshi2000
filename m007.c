@@ -28,7 +28,14 @@
 
 int lettercount (char *s)
 {
-  return 0;
+
+  int contador;
+  int ct;
+  contador =0;
+  while (s[contador] != 0)
+    contador++;
+  ct = (contador -2);
+  return ct;
 }
 
 

@@ -20,13 +20,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+
 
 /* Return the value in decimal base of the string b, interpreted
    as the a positive binary number. If the string contains any
    characters other than '1's and '0's, truncate the string
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
+
+int elevado (int e)
+
+{  int prod;
+   int i;
+   prod=1;
+   for (i=0; i<e)
+   {
+   prod = (prod * 2);
+   }
+   return prod;
+}
 
 int decimal (char *b)
 {
@@ -36,21 +48,20 @@ int decimal (char *b)
   int n;
   int i; 
 
+  int exp;
+
 
   n =strlen (b);  //tamanho de b
   
-  for (i=n-1; i>=0; i--) 
-  
-   valor = valor + (b[i]-48) * pow(2, n-i-1);
-
+  for (i=n-1; i>=0; i--)  
+   {
+   exp = elevado(n-i-1);
+   valor = valor + (b[i]-48) * exp);
+   }
   return valor;
-
 }
 
-
-
 #define USAGE "m004 <string>\n"
-
 /* Do not edit this function. */
 
 int main (int argc, char **argv)
