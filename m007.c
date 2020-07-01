@@ -28,16 +28,22 @@
 
 int lettercount (char *s)
 {
+  {
+  int contador = 0;
+  int i = 0;
 
-  int contador;
-  int ct;
-  contador =0;
-  while (s[contador] != 0)
+  while(s[contador] != 0)
+  {
+ if(s[contador]>=65 && s[contador]<=90 || s[contador]>=97 && s[contador]<=122)
+  {
+   i++;
+  }
+ 
     contador++;
-  ct = (contador -2);
-  return ct;
+  }
+  return i;
 }
-
+}
 
 
 /* Do not edit this function. */
