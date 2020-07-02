@@ -32,9 +32,12 @@ int elevado (int e)
 
 {  int prod;
    int i;
+
    prod=1;
-   for (i=0; i<e)
+
+   for (i=0; i<e;)
    {
+     i++;
    prod = (prod * 2);
    }
    return prod;
@@ -56,7 +59,7 @@ int decimal (char *b)
   for (i=n-1; i>=0; i--)  
    {
    exp = elevado(n-i-1);
-   valor = valor + (b[i]-48) * exp);
+   valor = valor + ((b[i]-48) * (exp));
    }
   return valor;
 }

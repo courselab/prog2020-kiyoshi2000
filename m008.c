@@ -23,6 +23,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <string.h>
+
 #define MAX 256
 
 /* Converts the string 's' from first-middle-last name 
@@ -30,6 +32,9 @@
 
 void lastname (char *s)
 {
+  
+
+  
 }
 
 
