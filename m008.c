@@ -48,11 +48,13 @@ j=0;
 
 while (s[n-1-j]!= 32) //Ler de tras para frente ate pegar um 'espaco'
 j++;
-for (i=0; i<j-1; i++){
-{if ((s[n-j+i] >=97) && (s[n-j+i]<=122)) //Se estiver minuscula 
+for (i=0; i<j-1; i++)
+{
+if ((s[n-j+i] >=97) && (s[n-j+i]<=122)) //Se estiver minuscula 
 x[i]=(s[n-j+i]-32); // Vira Maiscula
+
 else
-x[i]=s[n-j+i];} //Se tiver Maiscula continua maiscula
+x[i]=s[n-j+i]; //Se tiver Maiscula continua maiscula
 } //Colocar na string x a ultima palavra em maisculo
 strcpy(y,x);  //Guardar a ultima palavra em maisculo em uma string y 
 
