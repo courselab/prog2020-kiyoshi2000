@@ -20,6 +20,9 @@
  */
 
 #include <stdio.h>
+
+#include <string.h>
+
 #include <stdlib.h>
 
 #define USAGE "m011 <filename>\n"
@@ -28,7 +31,8 @@
 
 int wordcount (char *filename)
 {
-  return 98;
+
+  fopen(filename, "r");
 }
 
 /* Do not edit function main. */
