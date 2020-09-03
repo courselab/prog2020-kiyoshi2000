@@ -24,7 +24,20 @@
 /* Sort the first 'n' integers values in 'vector'. */
 
 void sort (int* vector, int n)
-{
+{int i;
+  int j;
+  int k;
+
+  for(i=1; i<n; i++){  // percorrer o vetor
+    for(j=0; j<n-1; j++){  //percorrer as posicoes do vetor
+      if (vector[j]>vector[j+1]){ //Se uma posicao for maior havera a troca
+        k = vector[j]; //variavel auxiliar para a passagem
+        vector[j] = vector [j+1]; // troca 1 
+        vector[j+1] = k; // troca 2
+        }
+    }
+  }
+
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"

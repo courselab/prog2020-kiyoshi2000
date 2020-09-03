@@ -30,8 +30,52 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int total_dias;
+  int total_dias_mes;
+
+  int i;
+  int j;
+
+  i=0;
+  total_dias_mes = 0;
+  j=0;
+  
+ 
+  char v_meses[12]={31,29,31,30,31,30,31,31,30,31,30,31}; //Qtd de dias nos meses
+  
+    if (month == 1)
+    total_dias_mes = 0;
+
+    else{
+    for (i=0; i<month-1; i++)
+    total_dias_mes =(total_dias_mes + v_meses[i]);
+    }
+    
+  
+  total_dias =(day+ total_dias_mes);
+
+  if ((total_dias % 7) == 1)
+    return wed;
+
+  if ((total_dias % 7) == 2)
+    return thu;
+
+  if ((total_dias % 7) == 3)
+    return fri;
+
+  if ((total_dias % 7) == 4)
+    return sat;
+
+  if ((total_dias % 7) == 5)
+    return sun;
+
+  if ((total_dias % 7) == 6)
+    return mon;
+
+  if ((total_dias % 7) == 0)
+    return tue;
 }
+
 
 /* Do not edit function main. */
 

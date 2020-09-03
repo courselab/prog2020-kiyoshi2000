@@ -22,11 +22,16 @@
 
 /* Return the greatest among a, b and c. */
 
-int greatest (int a, int b, int c)
-{
-  return a;
+int greatest (int a, int b, int c)  
+{  
+   
+   if ((a > b) && (a > c))
+    return a;
+    if ((b > a) && (b > c))
+    return b;
+    if ((c > b) && (c > a))
+    return c;
 }
-
 /* Do not edit this function. */
 
 int main (int argc, char **argv)
